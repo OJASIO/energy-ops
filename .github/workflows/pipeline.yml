@@ -48,15 +48,15 @@ jobs:
           KAFKA_SSL_KEY: certs/service.key
         run: python kafka_consumer_once.py
 
-      - name: Cleanup old records
-        run: |
-          python -c "
-          import sys
-          sys.path.insert(0, '.')
-          from db_writer import cleanup_old_records
-          cleanup_old_records()
-          print('Cleanup complete')
-          "
+      # - name: Cleanup old records
+      #   run: |
+      #     python -c "
+      #     import sys
+      #     sys.path.insert(0, '.')
+      #     from db_writer import cleanup_old_records
+      #     cleanup_old_records()
+      #     print('Cleanup complete')
+      #     "
 
       - name: Commit updated database
         run: |
