@@ -1,7 +1,9 @@
 # ⚡ EnergyOps Assistant
 
-A production-grade real-time energy monitoring platform for global manufacturing sites,
-built with Apache Kafka, Python, SQLite, and Groq LLaMA 3.
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Streamlit-FF4B4B?style=for-the-badge&logo=streamlit)](https://de-energy-ops-assistant.streamlit.app)
+[![GitHub Actions](https://github.com/OJASIO/energy-ops/actions/workflows/pipeline.yml/badge.svg)](https://github.com/OJASIO/energy-ops/actions)
+
+> Real-time energy monitoring platform for global manufacturing sites — live Kafka pipeline, GenAI knowledge assistant, and operational dashboard.
 
 **🔗 Live app:** https://de-energy-ops-assistant.streamlit.app
 
