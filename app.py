@@ -82,7 +82,6 @@ tab1, tab2, tab3 = st.tabs([
 # ════════════════════════════════════════════════════════════════════════════════
 with tab1:
 
-    @st.experimental_fragment(run_every=120)
     def dashboard():
         readings = get_recent_readings(hours=24)
         anomalies = get_anomalies()
@@ -470,7 +469,6 @@ with tab2:
 # ════════════════════════════════════════════════════════════════════════════════
 with tab3:
 
-    @st.experimental_fragment(run_every=120)
     def pipeline():
         readings_p = get_recent_readings()
         logs_p = get_pipeline_logs()
