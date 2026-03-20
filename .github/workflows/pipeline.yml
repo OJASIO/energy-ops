@@ -2,7 +2,7 @@ name: EnergyOps Pipeline
 
 on:
   schedule:
-    - cron: '*/10 * * * *'
+    - cron: '0 * * * *'
   workflow_dispatch:
 
 jobs:
@@ -13,8 +13,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -39,9 +37,7 @@ jobs:
           KAFKA_SSL_CA: certs/ca.pem
           KAFKA_SSL_CERT: certs/service.cert
           KAFKA_SSL_KEY: certs/service.key
-        run: |
-          cd producer
-          python kafka_producer_once.py
+        run: python kafka_producer_once.py
 
       - name: Run Kafka consumer
         env:
@@ -55,8 +51,8 @@ jobs:
       - name: Cleanup old records
         run: |
           python -c "
-          import sys, os
-          sys.path.insert(0, 'consumer')
+          import sys
+          sys.path.insert(0, '.')
           from db_writer import cleanup_old_records
           cleanup_old_records()
           print('Cleanup complete')
