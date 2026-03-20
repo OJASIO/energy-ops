@@ -87,11 +87,5 @@ cd app && streamlit run app.py
 
 ## Project Context
 
-Built as a portfolio project targeting Bosch's Digital Platform Operations internship.
-Demonstrates: Kafka streaming pipelines, real-time data monitoring, GenAI integration,
-and operational dashboard development — directly mapping to the role requirements.
-
-The architecture mirrors production patterns used at enterprise scale:
-separation of ingestion (producer), transformation (consumer), storage (SQLite),
-and serving (Streamlit) layers — the same pattern used in regulated financial
-data pipelines at Yubi and Teradata.
+Built to demonstrate production-grade data engineering at portfolio scale. The architecture mirrors enterprise patterns used in regulated environments — strict separation of ingestion (Kafka producer), consumption (Kafka consumer), storage (SQLite), and serving (Streamlit + GenAI) layers. The same layered pipeline pattern was applied at scale in financial data infrastructure serving global banks and FMCG enterprises.
+Designed to showcase: real-time streaming pipeline engineering, operational dashboard development, GenAI knowledge assistant integration, and automated CI/CD data workflows — applicable to any digital platform operations or data engineering role.
