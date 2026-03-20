@@ -52,7 +52,7 @@ def fetch_current_reading(site_name: str) -> dict:
 
         anomaly = False
         anomaly_reason = None
-        if consumption_kw > base * 1.08:
+        if consumption_kw > base * 1.20:
             anomaly = True
             anomaly_reason = f"High consumption: {consumption_kw:.0f}kW vs baseline {base}kW — elevated HVAC or production load"
         elif consumption_kw < base * 0.95:
