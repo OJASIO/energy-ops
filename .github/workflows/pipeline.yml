@@ -21,7 +21,7 @@ jobs:
           cache: 'pip'
 
       - name: Install dependencies
-        run: pip install confluent-kafka requests python-dotenv
+        run: pip install confluent-kafka requests python-dotenv pandas
 
       - name: Write Aiven SSL certificates
         run: |
