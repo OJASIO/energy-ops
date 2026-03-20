@@ -3,6 +3,8 @@
 A production-grade real-time energy monitoring platform for global manufacturing sites,
 built with Apache Kafka, Python, SQLite, and Groq LLaMA 3.
 
+**🔗 Live app:** https://de-energy-ops-assistant.streamlit.app
+
 ## Architecture
 
 ```
